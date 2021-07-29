@@ -20,4 +20,12 @@ module.exports = {
     // see https://github.com/facebook/jest/issues/9430
     "unicorn/prefer-module": "off",
   },
+  overrides: [
+    // eslint rules that should only be applied to test modules
+    {
+      files: ["jest.setup.js", "**/*.test.js"],
+      extends: ["plugin:jest/recommended"],
+      rules: { "node/no-unpublished-require": "off" },
+    },
+  ],
 };

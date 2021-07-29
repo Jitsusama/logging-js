@@ -7,7 +7,8 @@ const pino = require("pino");
  * @returns {pino.Logger}
  */
 const getLogger = (layer, level) => {
-  if (!children.has(layer)) children.set(layer, parent.child({ layer, level }));
+  if (!children.has(layer))
+    children.set(layer, parent.child({ layer }, { level }));
   return children.get(layer);
 };
 
