@@ -1,7 +1,7 @@
 {
   "name": "@jitsusama/logging-js",
   "description": "A simple logging client that meets a narrow set of needs.",
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -20,11 +20,11 @@
     "test": "jest --ci --silent --noStackTrace --bail=1"
   },
   "dependencies": {
-    "@types/pino": "^6.3.11",
     "pino": "^6.13.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
+    "@types/pino": "^6.3.11",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.4.0",
