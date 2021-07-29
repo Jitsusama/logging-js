@@ -85,4 +85,14 @@ class SimpleLogger {
   error(object, template, ...parameters) {
     this.logger.error(object, template, ...parameters);
   }
+
+  /**
+   * Fatal log.
+   * @param {any} object
+   * @param {string} [template]
+   * @param {...any} [parameters]
+   */
+  fatal(object, template, ...parameters) {
+    this.logger.fatal(object, template, ...parameters);
+  }
 }

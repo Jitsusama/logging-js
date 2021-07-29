@@ -7,11 +7,12 @@ const { getLogger } = require("./index.js");
 jest.useFakeTimers("modern");
 
 test.each([
-  ["trace", "1964-03-05T13:43:19.123Z", "1st", { a: "b" }, "hello"],
-  ["debug", "1960-08-25T19:38:10.234Z", "2nd", {}, "bonjour"],
-  ["info", "1959-04-25T00:29:48.345Z", "3rd", { c: { d: 1 } }, "word"],
-  ["warn", "1956-01-02T23:02:39.456Z", "4th", {}, "howdy"],
-  ["error", "1954-10-01T08:14:21.567Z", "5th", { thing: 1 }, "yo"],
+  ["trace", "1982-05-10T12:59:55.123Z", "1st", { a: "b" }, "hello"],
+  ["debug", "1964-03-05T13:43:19.234Z", "2nd", { c: { d: 1 } }, "hola"],
+  ["info", "1960-08-25T19:38:10.345Z", "3rd", {}, "bonjour"],
+  ["warn", "1959-04-25T00:29:48.456Z", "4th", { e: ["f"] }, "word"],
+  ["error", "1956-01-02T23:02:39.567Z", "5th", {}, "howdy"],
+  ["fatal", "1954-10-01T08:14:21.678Z", "6th", { thing: 1 }, "yo"],
 ])(
   "logs when logging level allows for it",
   // eslint-disable-next-line unicorn/prevent-abbreviations
