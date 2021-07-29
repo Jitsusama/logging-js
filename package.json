@@ -1,0 +1,36 @@
+{
+  "name": "@jitsusama/logging-js",
+  "description": "A simple logging client that meets a narrow set of needs.",
+  "version": "1.0.0-rc.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jitsusama/logging-js"
+  },
+  "bugs": {
+    "url": "https://github.com/jitsusama/logging-js/issues"
+  },
+  "homepage": "https://github.com/jitsusama/logging-js",
+  "main": "src/index.js",
+  "engines": {
+    "node": "^14.17.0"
+  },
+  "scripts": {
+    "pretest": "eslint --ext .js --max-warnings 0 .",
+    "test": "jest --ci --silent --noStackTrace --bail=1"
+  },
+  "dependencies": {
+    "@types/pino": "^6.3.11",
+    "pino": "^6.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-unicorn": "^34.0.1",
+    "prettier": "^2.3.2"
+  }
+}
