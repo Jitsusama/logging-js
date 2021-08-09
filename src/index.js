@@ -4,7 +4,7 @@ const { streamSym } = require("pino/lib/symbols.js");
 /**
  * Retrieve a logger.
  * @param {string} layer - software layer to associate logger with
- * @param {string} level - logging level
+ * @param {string} [level="silent"] - logging level
  * @returns {SimpleLogger}
  */
 const getLogger = (layer, level) => {
@@ -21,9 +21,9 @@ class SimpleLogger {
   /**
    * Create a new simple logger.
    * @param {string} layer
-   * @param {string} level
+   * @param {string} [level="silent"]
    */
-  constructor(layer, level) {
+  constructor(layer, level = "silent") {
     this.logger = pino({
       base: {},
       formatters: { level: (level) => ({ level }) },
@@ -34,6 +34,14 @@ class SimpleLogger {
       timestamp: pino.stdTimeFunctions.isoTime,
     });
     Object.assign(this, { [streamSym]: this.logger[streamSym] });
+  }
+
+  /**
+   * Change the current logging level.
+   * @param {string} newLevel
+   */
+  set level(newLevel) {
+    this.logger.level = newLevel;
   }
 
   /**

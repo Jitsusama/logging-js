@@ -33,10 +33,32 @@ test.each([
   ["silent", "error"],
   ["error", "info"],
 ])("does not log when logging level is set too high", (setLevel, logLevel) => {
-  const logger = getLogger("test", setLevel);
+  const logger = getLogger("7th", setLevel);
   const stdout = jest.spyOn(logger[streamSym], "write");
 
   logger[logLevel]({}, "hello");
+
+  expect(stdout).not.toBeCalled();
+});
+
+test.each([
+  ["debug", "trace"],
+  ["error", "info"],
+])("logging level can be changed later", (first, second) => {
+  const logger = getLogger("8th", first);
+  const stdout = jest.spyOn(logger[streamSym], "write");
+
+  logger.level = second;
+  logger[second]({}, "hello");
+
+  expect(stdout).toBeCalledWith(expect.stringMatching(/hello/));
+});
+
+test("when no level is provided, default to silent", () => {
+  const logger = getLogger("9th");
+  const stdout = jest.spyOn(logger[streamSym], "write");
+
+  logger.info({}, "hello");
 
   expect(stdout).not.toBeCalled();
 });
