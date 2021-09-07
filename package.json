@@ -11,13 +11,15 @@
     "url": "https://github.com/jitsusama/logging-js/issues"
   },
   "homepage": "https://github.com/jitsusama/logging-js",
-  "main": "src/index.js",
+  "browser": "src/browser.js",
+  "main": "src/main.js",
+  "type": "commonjs",
   "engines": {
     "node": "^14.17.0"
   },
   "scripts": {
     "pretest": "eslint --ext .js --max-warnings 0 .",
-    "test": "jest --ci --silent --noStackTrace --bail=1"
+    "test": "jest --ci --silent --noStackTrace --bail=1 --detectOpenHandles"
   },
   "dependencies": {
     "pino": "^6.13.0"

@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 const pino = require("pino");
 const { streamSym } = require("pino/lib/symbols.js");
-const { getLogger } = require("./index.js");
+const { getLogger } = require("./main.js");
 
 jest.useFakeTimers("modern");
 

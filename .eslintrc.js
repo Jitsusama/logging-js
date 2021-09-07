@@ -27,5 +27,10 @@ module.exports = {
       extends: ["plugin:jest/recommended"],
       rules: { "node/no-unpublished-require": "off" },
     },
+    // eslint rules specific to browser code
+    {
+      files: ["src/browser.js", "src/browser.test.js"],
+      env: { browser: true },
+    },
   ],
 };

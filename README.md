@@ -7,7 +7,7 @@
 
 This is a very simple logging library that currently only handles Node.JS apps.
 Its use cases are rather limited and are currently documented in this
-repository's [index.js](./src/index.js) file.
+repository's [main.js](./src/main.js) file.
 
 ## Installation
 
