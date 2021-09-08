@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: { es6: true, browser: false, node: true, jest: true },
+  env: { es6: true, browser: true, node: true, jest: true },
   parser: "@babel/eslint-parser",
   parserOptions: { requireConfigFile: false },
   extends: [
@@ -26,11 +26,6 @@ module.exports = {
       files: ["jest.setup.js", "**/*.test.js"],
       extends: ["plugin:jest/recommended"],
       rules: { "node/no-unpublished-require": "off" },
-    },
-    // eslint rules specific to browser code
-    {
-      files: ["src/browser.js", "src/browser.test.js"],
-      env: { browser: true },
     },
   ],
 };
