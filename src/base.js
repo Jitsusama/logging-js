@@ -109,8 +109,8 @@ module.exports = { BaseLogger };
 
 const parseLevel = (level) =>
   level ||
-  process?.env?.LOGGING_LEVEL ||
-  window?.localStorage?.getItem("LOGGING_LEVEL") ||
+  (process ? process.env.LOGGING_LEVEL : false) ||
+  (window ? window.localStorage.getItem("LOGGING_LEVEL") : false) ||
   "silent";
 
 // map logging levels to numeric values
