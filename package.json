@@ -1,7 +1,7 @@
 {
   "name": "@jitsusama/logging-js",
   "description": "A simple logging client that meets a narrow set of needs.",
-  "version": "1.0.0-rc.8",
+  "version": "1.0.0-rc.9",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -11,8 +11,8 @@
     "url": "https://github.com/jitsusama/logging-js/issues"
   },
   "homepage": "https://github.com/jitsusama/logging-js",
-  "browser": "src/text.js",
-  "main": "src/json.js",
+  "browser": "lib/text.js",
+  "main": "lib/json.js",
   "type": "commonjs",
   "engines": {
     "node": "^14.17.0"

@@ -6,7 +6,7 @@
 ![vulnerabilities badge](https://img.shields.io/snyk/vulnerabilities/npm/@jitsusama/logging-js)
 
 This is a very simple logging library that handles Node.JS or browser apps. Its use cases are rather limited and are
-currently documented in this repository's [json.js](./src/json.js) and [text.js](./src/text.js) files.
+currently documented in this repository's [json.js](lib/json.js) and [text.js](lib/text.js) files.
 
 ## Installation
 
@@ -27,8 +27,8 @@ imported from a Node.JS application.
 You can override the default output handling by specifically importing the type you wish:
 
 ```javascript
-const textLogging = require("@jitsusama/logging-js/src/text.js");
-const jsonLogging = require("@jitsusama/logging-js/src/json.js");
+const textLogging = require("@jitsusama/logging-js/lib/text.js");
+const jsonLogging = require("@jitsusama/logging-js/lib/json.js");
 ```
 
 ## Contributing
