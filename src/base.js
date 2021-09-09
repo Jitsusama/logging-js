@@ -108,10 +108,23 @@ class BaseLogger {
 module.exports = { BaseLogger };
 
 const parseLevel = (level) =>
-  level ||
-  (process ? process.env.LOGGING_LEVEL : false) ||
-  (window ? window.localStorage.getItem("LOGGING_LEVEL") : false) ||
-  "silent";
+  level || levelFromEnvironment() || levelFromLocalStorage() || "silent";
+
+const levelFromEnvironment = () => {
+  try {
+    return process.env.LOGGING_LEVEL;
+  } catch {
+    // eslint-disable-next-line no-empty
+  }
+};
+
+const levelFromLocalStorage = () => {
+  try {
+    return window.localStorage.getItem("LOGGING_LEVEL");
+  } catch {
+    // eslint-disable-next-line no-empty
+  }
+};
 
 // map logging levels to numeric values
 const levels = {
