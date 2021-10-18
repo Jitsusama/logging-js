@@ -1,7 +1,7 @@
 {
   "name": "@jitsusama/logging-js",
   "description": "A simple logging client that meets a narrow set of needs.",
-  "version": "1.0.0-rc.10",
+  "version": "1.0.0-rc.11",
   "license": "MIT",
   "repository": {
     "type": "git",
